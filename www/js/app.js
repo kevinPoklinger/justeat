@@ -3032,22 +3032,18 @@ function displayCart(data)
 	
 	if(transaction_type=="dinein")
 	{
+        $(".delivery_time").attr("placeholder",  getTrans("Delivery Time",'delivery_time'));
 		$("#dineinWrap").show();
 		$("#deliveryWrap").hide();
 	}
-	else
-	{
-		$(".delivery_time").attr("placeholder",  getTrans("Delivery Time",'delivery_time') );
-		$("#deliveryWrap").show();
-		$("#dineinWrap").hide();
-	}
-	if ( transaction_type=="delivery"){
-		$(".delivery_time").attr("placeholder",  getTrans("Delivery Time",'delivery_time') );
+	else if ( transaction_type=="delivery"){
+		$(".delivery_time").attr("placeholder",  getTrans("Delivery Time",'delivery_time'));
 		$("#deliveryWrap").show();
 		$("#dineinWrap").hide();
 	} else {
 		$(".delivery_time").attr("placeholder", getTrans("Pickup Time",'pickup_time') );
 		$("#deliveryWrap").hide();
+        $("#dineinWrap").hide();
 	}
 	
 	
