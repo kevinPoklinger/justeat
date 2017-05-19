@@ -3207,7 +3207,7 @@ function checkOut()
 	}
 	
 	if ( $(".required_time").val()==2){
-		if ( $(".delivery_time").val() ==""){			
+		if ( $(".delivery_time").val() =="" && tr_type != "dinein"){			
 			if ( $(".delivery_asap:checked").length<=0){
 				onsenAlert( tr_type+ " "+ getTrans('time is required','time_is_required') );
 				return;
